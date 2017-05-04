@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--<color name="kml_line_color">#ff009914</color>-->
+    <color name="kml_line_color">@android:color/black</color>
+    <color name="kml_fill_color">#80f4ff00</color>
+    <color name="kml_fill_color1">#ff898287</color>
+</resources>

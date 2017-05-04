@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+    <FrameLayout
+        android:id="@+id/mapContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    <SlidingDrawer
+        android:id="@+id/listOfOverlaysDrawer"
+        android:layout_width="360dp"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:orientation="horizontal"
+        android:rotation="180"
+        android:handle="@+id/handle"
+        android:content="@+id/content">
+
+        <ImageView
+            android:id="@id/handle"
+            android:layout_width="40dp"
+            android:layout_height="80dp"
+            android:background="@drawable/handle"
+            android:rotation="180"/>
+
+        <LinearLayout
+            android:id="@id/content"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:background="#ccffffff"
+            android:rotation="180">
+
+            <ListView
+                android:id="@+id/overlaysList"
+                android:layout_width="300dp"
+                android:layout_height="match_parent"/>
+        </LinearLayout>
+    </SlidingDrawer>
+
+    <SlidingDrawer
+        android:id="@+id/mapTypeDrawer"
+        android:layout_width="360dp"
+        android:layout_height="match_parent"
+        android:layout_alignParentRight="true"
+        android:orientation="horizontal"
+        android:handle="@+id/handle"
+        android:content="@+id/content">
+
+        <ImageView
+            android:id="@id/handle"
+            android:layout_width="40dp"
+            android:layout_height="80dp"
+            android:background="@drawable/handle"
+            android:rotation="180"/>
+
+        <LinearLayout
+            android:id="@id/content"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:background="#ccffffff">
+
+            <ListView
+                android:id="@+id/mapTypeList"
+                android:layout_width="300dp"
+                android:layout_height="match_parent"/>
+        </LinearLayout>
+    </SlidingDrawer>
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyleLargeInverse"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="gone"/>
+
+</RelativeLayout>
